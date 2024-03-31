@@ -2,7 +2,7 @@ const url = "https://api.openweathermap.org/data/2.5/";
 const key = "98ae31648bb5166c77e4887e33fb4245";
 
 const setQuery = (e) => {
-  if (e.keyCode == "13") getResults(serchBar.value);
+  if (e.keyCode == "13") getResults(searchBar.value);
 };
 
 const getResults = (cityName) => {
@@ -25,5 +25,5 @@ const displayResult = (result) => {
   desc.innerText = result.weather[0].description;
 };
 
-const serchBar = document.getElementById("searchBar");
-serchBar.addEventListener("keypress", setQuery);
+const searchBar = document.getElementById("searchBar");
+searchBar.addEventListener("keypress", setQuery);
